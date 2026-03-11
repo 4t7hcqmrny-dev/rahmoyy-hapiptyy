@@ -1,50 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Website</title>
+    <title>حب جميل</title>
     <style>
         body {
-            background-color: #ffcccb;
-            color: #800000;
-            text-align: center;
             font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
         }
         h1 {
-            font-size: 48px;
+            color: #e63946;
         }
-        p {
-            font-size: 24px;
+        .heart {
+            font-size: 50px;
+            color: #e63946;
         }
-        #content {
-            display: none;
+        .content {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-
-    <h1>Welcome to Your Love Website!</h1>
-    <div id="passwordForm">
-        <input type="password" id="password" placeholder="Enter Password" />
-        <button onclick="checkPassword()">Submit</button>
+    <h1>أحبك من كل قلبي <span class="heart">💖</span></h1>
+    <div class="content">
+        <p>كلمات حب محاطة بالرومانسية والجمال.</p>
+        <p>كلماتك هي ا��نور الذي ينير طريقي.</p>
+        <p>معك، كل شيء جميل.</p>
     </div>
-    <div id="content">
-        <p>Here is a beautiful love message for you.</p>
-        <p>Love is not about how much you say 'I love you', but how much you prove that it's true.</p>
-    </div>
-
-    <script>
-        function checkPassword() {
-            var password = document.getElementById("password").value;
-            if (password === "your_password") { // Change 'your_password' to the desired password
-                document.getElementById("passwordForm").style.display = "none";
-                document.getElementById("content").style.display = "block";
-            } else {
-                alert("Incorrect Password. Try Again!");
-            }
-        }
-    </script>
-
 </body>
 </html>
