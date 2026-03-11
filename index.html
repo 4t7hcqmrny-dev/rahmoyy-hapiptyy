@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حب جميل</title>
+    <title>حب</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            color: #e63946;
-        }
-        .heart {
-            font-size: 50px;
-            color: #e63946;
-        }
-        .content {
-            margin-top: 20px;
-        }
+        body { text-align: center; font-family: Arial, sans-serif; background-color: #f9f9f9; color: #333; }
+        h1 { color: #ff69b4; }
+        form { margin-top: 20px; }
+        input[type="password"] { padding: 10px; width: 200px; }
+        input[type="submit"] { padding: 10px 20px; background-color: #ff69b4; border: none; color: white; cursor: pointer; }
+        input[type="submit"]:hover { background-color: #ff1493; }
     </style>
 </head>
 <body>
-    <h1>أحبك من كل قلبي <span class="heart">💖</span></h1>
-    <div class="content">
-        <p>كلمات حب محاطة بالرومانسية والجمال.</p>
-        <p>كلماتك هي ا��نور الذي ينير طريقي.</p>
-        <p>معك، كل شيء جميل.</p>
+    <h1>مرحبًا بكم في موقع الحب</h1>
+    <form id="passwordForm">
+        <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+        <input type="submit" value="دخول">
+    </form>
+    <div id="content" style="display:none;">
+        <h2>هذا هو محتوى الحب السرّي!</h2>
+        <p>هنا يمكنكم استكشاف أعمق مشاعر الحب والرومانسية.</p>
     </div>
+    <script>
+        const passwordForm = document.getElementById('passwordForm');
+        const content = document.getElementById('content');
+        passwordForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const password = document.getElementById('password').value;
+            if (password === 'sasa') {
+                content.style.display = 'block';
+                passwordForm.style.display = 'none';
+            } else {
+                alert('كلمة المرور خاطئة!');
+            }
+        });
+    </script>
 </body>
 </html>
